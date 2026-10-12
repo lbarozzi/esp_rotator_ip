@@ -46,7 +46,7 @@ async function refresh(){try{paint(await request('position'))}catch(e){connectio
 async function command(direction){try{paint(await request(direction))}catch(e){await refresh()}}
 document.querySelectorAll('[data-command]').forEach(button=>button.addEventListener('click',()=>command(button.dataset.command)));
 offsetEl.addEventListener('input',()=>{if(state)paint(state)});
-refresh();setInterval(refresh,500);
+refresh();setInterval(refresh,250);
 </script></body></html>
 )HTML";
 
